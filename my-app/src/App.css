@@ -1,7 +1,9 @@
 .App {
   text-align: center;
+  margin: auto; 
   display: flex;
-  
+  background-color: #E5E5E5;
+  color:#666666;
   flex-wrap: wrap
 }
 

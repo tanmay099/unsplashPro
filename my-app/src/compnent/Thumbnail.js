@@ -4,21 +4,18 @@ import './Thumbnail.css'
 //Thumbnail component to store image tile
 
 class Thumbnail extends Component {
-
-constructor(props){
- super(props)
-}
-
+    
     render(){
       const {img } = this.props
         return(
 
           
-            <div className="card-type-2" >
+            <div key={img.id} className="card-type-2" >
        <div className="img-c">
-              <img src={img.urls.small} style={{width: 400, height: 400}} /></div>
+              <img src={img.urls.thumb} style={{width: 450, height: 400}} alt={'loading..'} /></div>
               <div className="clear-line"></div>
            <h4>{'Likes: ' + img.likes}</h4>
+           <h4>{img.description ? img.description : 'No description available'}</h4>
            </div>
        
         )
